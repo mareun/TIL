@@ -28,3 +28,4 @@ UNITY3D
 ========
 UNITY를 처음 사용해보는 사람들에게는 적어도 다음영상을 보는 것을 추천한다.\
 https://unity3d.com/kr/learn/tutorials/topics/interface-essentials
+https://unity3d.com/kr/learn/tutorials/s/scripting

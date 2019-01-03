@@ -24,3 +24,7 @@ vr 개요
 모니터는 2차원 출력장치이므로 꼭 필요한 과정이다. \
 **'텍스처 매핑(Texture Mapping)'** : 3D 그래픽 속의 2D 그림. 예를 들어 사람이 들고 있는 사진, 하늘에 구름이 떠 있는 광경 등의 3차원 그래픽을 사용할 필요가 없는 것들을 의미.
 
+UNITY3D
+========
+UNITY를 처음 사용해보는 사람들에게는 적어도 다음영상을 보는 것을 추천한다.\
+https://unity3d.com/kr/learn/tutorials/topics/interface-essentials

@@ -39,3 +39,6 @@ gameObject.renderer.material.color = Color.red;
 2. renderer에 접근
 3. 그 renderer에 첨부된 재질(meterial)에 접근
 4. 그 재질(meterial)의 색상(color)에 접근
+5. 색상(Color)클래스의 red로 바로가기 설정
+
+출처: (https://unity3d.com/kr/learn/tutorials/modules/beginner/scripting/scripts-as-behaviour-components?playlist=17117)

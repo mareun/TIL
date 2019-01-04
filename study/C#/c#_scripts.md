@@ -5,7 +5,7 @@ Scripts as Behaviour Components
 
 ### 예제#1
 - 오브젝트의 기본 재질의 색상 값에 영향을 주어 큐브의 색상을 바꾼다.
-```
+```c#
 using UnityEngine;
 using System.Collections;
 

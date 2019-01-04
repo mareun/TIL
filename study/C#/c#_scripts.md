@@ -13,10 +13,10 @@ public class ExampleBehaviourScript : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R)) //키보드에서 R키 입력받음
         {
             GetComponent<Renderer> ().material.color = Color.red;
-        }
+        }//색상이 Red로 변경
         if (Input.GetKeyDown(KeyCode.G))
         {
             GetComponent<Renderer>().material.color = Color.green;
@@ -28,4 +28,14 @@ public class ExampleBehaviourScript : MonoBehaviour
     }
 }
 ```
+여기에서 다음 코드의 동작을 보자면,
+```c#
+gameObject.renderer.material.color = Color.red;
+//GetComponent<Renderer> ().material.color = Color.red;
+```
+( 게임 오브젝트를 참조할 때 "gameObject"라는 스크립틀르 첨부하면 이 item을 참조 할 수 있다. )\
 
+1. gameObject라는 스크립트가 첨부된 게임 오브젝트에 접근
+2. renderer에 접근
+3. 그 renderer에 첨부된 재질(meterial)에 접근
+4. 그 재질(meterial)의 색상(color)에 접근

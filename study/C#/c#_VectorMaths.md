@@ -19,3 +19,17 @@ Vector Maths
 
 - **Vector3.Dot(VectorA, VercotrB)** 함수로 Dot Product값을 구할 수 있다.
 
+참고: [Vector3.Dot](https://docs.unity3d.com/ScriptReference/Vector3.Dot.html?_ga=2.7846322.1014157617.1546605019-1821101929.1546605019)
+
+***
+### Cross Product
+- 벡터의 외적인듯 하다.
+- 결과값은 스칼라값이 아닌 벡터값이다.
+
+![image](https://user-images.githubusercontent.com/44865268/50723405-abc5bf80-1120-11e9-812e-b93bd15ec852.png)
+
+- **Vector3.Cross(VectorA, VectorB)** 함수로 Cross Product값을 구할 수 있다.
+
+참고: [Vector3.Cross](https://docs.unity3d.com/ScriptReference/Vector3.Cross.html?_ga=2.217947158.1014157617.1546605019-1821101929.1546605019)
+
+출처: (https://unity3d.com/kr/learn/tutorials/topics/scripting/vector-maths?playlist=17117)

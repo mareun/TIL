@@ -17,5 +17,5 @@ Vector Maths
 
 <img width="366" alt="screenshot1" src="https://user-images.githubusercontent.com/44865268/50723191-d9f5d000-111d-11e9-9cce-b7aa64711c6d.PNG">
 
-- **Vector3.Dot(VectorA, VercotrB)**함수로 Dot Product값을 구할 수 있다.
+- **Vector3.Dot(VectorA, VercotrB)** 함수로 Dot Product값을 구할 수 있다.
 

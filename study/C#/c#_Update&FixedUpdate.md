@@ -49,3 +49,6 @@ public class UpdateAndFixedUpdate : MonoBehaviour
     }
 }
 ```
+- 호출시간의 차이
+
+출처: (https://unity3d.com/kr/learn/tutorials/topics/scripting/update-and-fixedupdate?playlist=17117)

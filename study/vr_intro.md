@@ -33,3 +33,4 @@ https://unity3d.com/kr/learn/tutorials/s/scripting
 - VR 연결: File -> Player Settings -> XR Setting -> Virtual Reality Supported 체크\
 여기서 VR기기들을 추가할 수도 있다.
 - Asset Store -> VIVE Input Utility : 컨트롤러의 물리적인 기능을 구현
+- root object: VR Origin 즉, vr 세상에서의 중심이라고 생각하기. VR Origin은 고정. 이것을 기준으로 상대적 좌표로 측정.

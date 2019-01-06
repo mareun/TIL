@@ -32,3 +32,4 @@ https://unity3d.com/kr/learn/tutorials/s/scripting
 
 - VR 연결: File -> Player Settings -> XR Setting -> Virtual Reality Supported 체크\
 여기서 VR기기들을 추가할 수도 있다.
+- Asset Store -> VIVE Input Utility : 컨트롤러의 물리적인 기능을 구현

@@ -38,4 +38,4 @@ public class CheckState : MonoBehaviour
 - 'activeSelf'와 'activeInHierarchy'를 통해 오브젝트가 장면이나 계층 내에서 활성화 상태인지 확인한다.
 - 부모 오브젝트 활성화 : Active Self: true , Active in Hierarchy: true
 - 부모 오브젝트 비활성화 : Active Self: true , Active in Hierarchy: false\
-Scene에서 활성화 되지 않는다. (보이지 않는다.)
+Scene에서 활성화 되지 않는다. (보이지 않는다. )

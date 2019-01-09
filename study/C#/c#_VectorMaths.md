@@ -5,6 +5,8 @@ Vector Maths
 움직이는 Objects는 Veloity를 가진다. 
 - Unity에서는 왼손 좌표계를 사용한다.
 
+![image](https://user-images.githubusercontent.com/44865268/50893113-79c79c80-1443-11e9-8166-0dfe7497e838.png)
+
 <img width="430" alt="screenshot1" src="https://user-images.githubusercontent.com/44865268/50723127-dd3c8c00-111c-11e9-9e2b-b711629e22af.PNG">
 
 - **Vector3.magnitude** 함수로 위 사진의 Magnitude계산을 수행한다.

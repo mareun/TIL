@@ -31,4 +31,23 @@ Vector3 result = Vector3.Lerp (from, to, 0.75f);
 - The smae principle is applied when using Color.Lerp.
 - In the Color struct, colours are represented by 4 floats representing red, blue, green and alpha.
 
+```c#
+void Update ()
+{
+    light.intensity = Mathf.Lerp(light.intensity, 8f, 0.5f);
+}//frame rate에 의존
+
+void Update ()
+{
+    light.intensity = Mathf.Lerp(light.intensity, 8f, 0.5f * Time.deltaTime);
+}//per second
+```
+- 빛의 강도가 0에서 시작하면 첫 번째 update 후에는 4로 설정. (0~8 사이 50%이므로)
+- Please note that when smoothing value it its often best to use the 'SmoothDamp'function.
+
+
+
 ***
+
+
+출처: (https://unity3d.com/kr/learn/tutorials/topics/scripting/linear-interpolation?playlist=17117)

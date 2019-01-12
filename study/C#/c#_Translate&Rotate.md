@@ -22,6 +22,8 @@ public class TransformFunctions : MonoBehaviour
         if(Input.GetKey(KeyCode.UpArrow)) //방향키 위
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
             //Vector3.forward는 z축이동
+            //Time.deltaTime : 시간에 따라 이동. 초단위
+            //아니면 레이아웃? 단위로 이동
         
         if(Input.GetKey(KeyCode.DownArrow)) //방향키 아래
             transform.Translate(-Vector3.forward * moveSpeed * Time.deltaTime); //-으로 방향을 반대로 전환

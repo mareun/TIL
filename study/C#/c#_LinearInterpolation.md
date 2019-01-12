@@ -37,12 +37,16 @@ void Update ()
     light.intensity = Mathf.Lerp(light.intensity, 8f, 0.5f);
 }//frame rate에 의존
 
+```
+- 빛의 강도가 0에서 시작하면 첫 번째 update 후에는 4로 설정. (0~8 사이 50%이므로) 그 다음은 차례로 6, 7, 7.5순으로 설정.
+- 즉 변경 속도는 from에 가까워 질수록 느려진다.
+
+```c#
 void Update ()
 {
     light.intensity = Mathf.Lerp(light.intensity, 8f, 0.5f * Time.deltaTime);
 }//per second
 ```
-- 빛의 강도가 0에서 시작하면 첫 번째 update 후에는 4로 설정. (0~8 사이 50%이므로)
 - Please note that when smoothing value it its often best to use the 'SmoothDamp'function.
 
 

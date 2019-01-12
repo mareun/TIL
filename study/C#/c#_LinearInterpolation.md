@@ -6,6 +6,7 @@ Linear Interpolation
 ### Mathf.Lerp function
 ```c#
 float result = Mathf.Lear(3f, 5f, 0.5f);
+//parameters
 //3f: value to interpolate from
 //5f: value to interpolat to
 //0.5f: how far to interpolate

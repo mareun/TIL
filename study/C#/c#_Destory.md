@@ -19,9 +19,11 @@ public class DestroyBasic : MonoBehaviour
     void Update ()
     {
         if(Input.GetKey(KeyCode.Space))
+        //스페이스바르 누르면 gameObject가 사라짐.
         {
-            Destroy(gameObject);
-        }//스페이스바르 누르면 gameObject가 사라짐.
+            Destroy(gameObject); //즉시
+            //Destroy(gameObjcet, 3f); //3초뒤에 사라짐.
+        }
     }
 
 ```
@@ -63,7 +65,10 @@ public class DestroyComponent : MonoBehaviour
         if(Input.GetKey(KeyCode.Space))
         {
             Destroy(GetComponent<MeshRenderer>());
-        }
+        }//GetComponent로 컴포넌트를 참조
+        //여기서는 MeshRenderer라는 컴포넌트를 제거
+        //그러면 오브젝트가 더 이상 시각적으로 렌더링되지 않는다.
     }
 }
 ```
+- 전체 게임 오브젝트가 아닌 컴포넌트만 제거할 수 있다.

@@ -28,7 +28,10 @@ UNITY3D
 ========
 UNITY를 처음 사용해보는 사람들에게는 적어도 다음영상을 보는 것을 추천한다.\
 https://unity3d.com/kr/learn/tutorials/topics/interface-essentials
+\
 https://unity3d.com/kr/learn/tutorials/s/scripting
+\
+youtube unity 강의
 
 - VR 연결: File -> Player Settings -> XR Setting -> Virtual Reality Supported 체크\
 여기서 VR기기들을 추가할 수도 있다.

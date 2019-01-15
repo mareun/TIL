@@ -41,4 +41,8 @@ Vector Maths
 
 참고: [Vector3.Cross](https://docs.unity3d.com/ScriptReference/Vector3.Cross.html?_ga=2.217947158.1014157617.1546605019-1821101929.1546605019)
 
+#### 예시
+> 탱크\
+외적 값을 통해 탱크의 회전축을 파악하여 대포를 쏠 방향을 제시
+
 출처: (https://unity3d.com/kr/learn/tutorials/topics/scripting/vector-maths?playlist=17117)

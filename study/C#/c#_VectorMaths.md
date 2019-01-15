@@ -17,9 +17,16 @@ Vector Maths
 - 두 벡터의 값을 곱하여 더함(내적). 스칼라이다.
 - 두 벡터가 서로 직각인지 판단.(값이 0일때 직각이다.)
 
+
 <img width="366" alt="screenshot1" src="https://user-images.githubusercontent.com/44865268/50723191-d9f5d000-111d-11e9-9cce-b7aa64711c6d.PNG">
 
 - **Vector3.Dot(VectorA, VercotrB)** 함수로 Dot Product값을 구할 수 있다.
+
+#### 예시
+> 비행기\
+내적값이 0: 수평\
+내적값이 0이하: 상승\
+ 내적값이 0이상: 하강
 
 참고: [Vector3.Dot](https://docs.unity3d.com/ScriptReference/Vector3.Dot.html?_ga=2.7846322.1014157617.1546605019-1821101929.1546605019)
 

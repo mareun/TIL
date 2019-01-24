@@ -1,5 +1,9 @@
+출처: (https://unity3d.com/kr/learn/tutorials/topics/graphics/introduction-lighting-and-rendering?playlist=17102)
+
+
 Introduction to Lighting and Rendering
 ====================================
+
 
 ### How GI works in Unity.
 - GI : Global illumination

@@ -15,4 +15,4 @@ Introduction to Lighting and Rendering
 2. with direct light only Center
 3. with indirect global illumination
 - 색상이 표면사이에 bounces되어 훨씬 더 사실적인 결과를 제공한다.
-
+- light를 모든 범위에서 baking할 때는 비용이 비싸서 미리 baking하거나 수치를 줄이는 방법이 있다.

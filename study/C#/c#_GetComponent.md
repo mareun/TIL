@@ -71,5 +71,7 @@ public class YetAnotherScript : MonoBehaviour
 }
 ```
 
-> 다른 Script 접근에 GetComponent를 사용하는 것이 가장 일반적이다.
+> 다른 Script 접근에 GetComponent를 사용하는 것이 가장 일반적이다.\
 > API를 통해 노출되지 않은 다른 component 접근에도 사용한다. (ex. Collider, 구형 충돌체와 박스형 충돌체의 다른 속성)
+
+출처: (https://unity3d.com/kr/learn/tutorials/topics/scripting/getcomponent?playlist=17117)

@@ -2,6 +2,9 @@ Invoke
 =======
 - 일정한 시간 지연 후에 함수의 호출을 예약한다.
 
+### Invoke
+- 함수를 1회 호출할 때 사용한다.
+
 ```c#
 using UnityEngine;
 using System.Collections;
@@ -26,3 +29,11 @@ public class InvokeScript : MonoBehaviour
     //여기서는 2초후에 이 함수가 호출된다.
 }
 ```
+
+
+***
+
+### InbokeRepeating
+- 함수를 여러번 반복하여 호출할 때 사용한다.
+
+

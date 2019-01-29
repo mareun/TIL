@@ -15,10 +15,13 @@ public class InvokeScript : MonoBehaviour
     {
         Invoke ("SpawnObject", 2);
     }
+    //Start함수에서 Invoke함수 호출
+    //(호출하고 싶은 메소드의 이름, 초단위의 지연 시간 길이)
     
     void SpawnObject()
     {
         Instantiate(target, new Vector3(0, 2, 0), Quaternion.identity);
     }
+    //target을 위치 0,2,0에서 instantiate한다.
 }
 ```

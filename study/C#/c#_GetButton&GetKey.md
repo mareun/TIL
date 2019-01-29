@@ -110,3 +110,5 @@ public class KeyInput : MonoBehaviour
 ![image](https://user-images.githubusercontent.com/44865268/51252865-42776380-19e0-11e9-8d99-31bac99bec58.png)
 
 - GetButton과 동일
+
+출처: (https://unity3d.com/kr/learn/tutorials/topics/scripting/getbutton-and-getkey?playlist=17117)

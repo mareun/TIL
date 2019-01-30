@@ -15,6 +15,7 @@ public class EnumScript : MonoBehaviour
     enum Direction {North, East, South, West};
     //Enumeration을 선언하는 구문은 "enum"
     //type을 선언한다. 그 이름으로 Direction이라고 할 것이다.
+    //배열을 선언하는 것처럼 다양한 상수를 콤마로 구분하여 {}에 넣는다.
 
         void Start () 
     {

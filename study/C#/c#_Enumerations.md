@@ -39,6 +39,7 @@ public class EnumScript : MonoBehaviour
         
         return dir;     
     }
+    //방향을 반대로 전환시키는 간단한 함수
 }
 ```
 

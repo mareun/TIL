@@ -5,7 +5,7 @@ Enumeration
 - 다음 코드는 나침판의 동서남북을 예시로 듦.
 - Enumeration은 class의 안이나 밖에서 생성 가능.
 - class안에 사용하면 해당 class만 Enumeration을 사용하고, 바깥에 Enumeration이 사용되면 다른 class들도 이 Enumeration에 접근 가능.
-- Enumeration에서 선언된 각각의 상수는 기본적으로 0부터 시작하는 정수값을 하나씩 가지고 있다. 그 정수값은 집합 안에서 증가한다. (배열의 자리같은 느낌으로!)
+
 
 ```c#
 using UnityEngine;
@@ -41,3 +41,17 @@ public class EnumScript : MonoBehaviour
     }
 }
 ```
+
+```c#
+    enum Direction {North, East, South, West};
+    //{0, 1, 2, 3}
+    enum Direction {North = 1, East, South, West};
+    //{1, 2, 3, 4}
+    enum Direction {North = 7, East = 3, South = 1, West = 2};
+    //{7, 3, 1, 2}
+    enum Direction : short {North , East, South, West};
+    //int타입이 아닌 short 타입으로 선언
+```
+- Enumeration에서 선언된 각각의 상수는 기본적으로 0부터 시작하는 정수값을 하나씩 가지고 있다. 그 정수값은 집합 안에서 증가한다. (배열의 자리같은 느낌으로!)
+- 값의 type과 값 자체는 필요하다면 둘 다 오버라이드 할 수 있다. 만일 여기서 North = 1로 선언한다면 그 다음은 2, 3, 4 차례로 값을 가지게 된다.
+- 또는 값을 각자 따로 지정해 줄 수도 있다.

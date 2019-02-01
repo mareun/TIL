@@ -15,7 +15,8 @@ public class ConversationScript : MonoBehaviour
     
     void Greet()
     {
-        switch (intelligence) //switch구문(항상 보던 구조!)
+        //switch구문(항상 보던 구조!)
+        switch (intelligence)
         {
         case 5:
             print ("Why hello there good sir! Let me teach you about Trigonometry!");
@@ -32,7 +33,7 @@ public class ConversationScript : MonoBehaviour
         case 1:
             print ("Ulg, glib, Pblblblblb");
             break;
-        default:
+        default: //else
             print ("Incorrect intelligence level.");
             break;
         }

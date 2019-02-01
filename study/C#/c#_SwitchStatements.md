@@ -2,7 +2,7 @@ Switch Statements
 =================
 
 - 조건문 switch문
-- 예시: Enumeration에 기초한 의사결정
+- 예시: Enumeration에 기초한 의사결정(캐릭터의 의사소통이 지능단계에 의거하여 달라진다는 코드)
 
 ```c#
 using UnityEngine;

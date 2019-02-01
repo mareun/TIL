@@ -15,7 +15,7 @@ public class ConversationScript : MonoBehaviour
     
     void Greet()
     {
-        switch (intelligence)
+        switch (intelligence) //switch구문(항상 보던 구조!)
         {
         case 5:
             print ("Why hello there good sir! Let me teach you about Trigonometry!");

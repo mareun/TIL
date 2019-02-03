@@ -17,7 +17,7 @@ public class EnumScript : MonoBehaviour
     //Enumeration을 선언하는 구문은 "enum"
     //type을 선언한다. 그 이름으로 Direction이라고 할 것이다.
     //배열을 선언하는 것처럼 다양한 상수를 콤마로 구분하여 {}에 넣는다.
-    //값들은 {0, 1, 2, 3}이렇게 갖게 된다.
+    //값들은 {0, 1, 2, 3}이렇게 갖게 된다. 배열 자리를 갖는 것처럼?
 
         void Start () 
     {

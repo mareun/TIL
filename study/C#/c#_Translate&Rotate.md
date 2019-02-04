@@ -40,6 +40,7 @@ public class TransformFunctions : MonoBehaviour
 ```
 
 - 여기 적용된 함수들은 world축이 아닌 local축에 적용된다. 즉 적용되는 축에 대해 상대적이다.
+- 그래서 카메라를 기준이 아닌 오브젝트 기준으로 움직이는 느낌이다.
 - 물리와 상호작용을 하는 오브젝트는 이러한 함수를 사용하지 않아야 한다.
 
 출처 : (https://unity3d.com/kr/learn/tutorials/topics/scripting/translate-and-rotate?playlist=17117)

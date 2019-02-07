@@ -10,3 +10,5 @@ Light Types
 - Directional Lights에 의해 투영된 그림자는 위치와 관련없이 동일하게 보인다.
 - 빛을 Rotating하게 되면 greatly affect the visual result. 
 - 야외 장면을 밝힐 때 유용.
+
+출처: (https://unity3d.com/kr/learn/tutorials/topics/graphics/light-types?playlist=17102)

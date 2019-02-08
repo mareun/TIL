@@ -11,4 +11,8 @@ Light Types
 - 빛을 Rotating하게 되면 greatly affect the visual result. 
 - 야외 장면을 밝힐 때 유용.
 
+***
+### Poing Lights
+
+
 출처: (https://unity3d.com/kr/learn/tutorials/topics/graphics/light-types?playlist=17102)

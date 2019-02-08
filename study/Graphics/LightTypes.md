@@ -14,5 +14,6 @@ Light Types
 ***
 ### Poing Lights
 
+![image](https://user-images.githubusercontent.com/44865268/52485597-969aef80-2bfc-11e9-807d-33da6a74493c.png)
 
 출처: (https://unity3d.com/kr/learn/tutorials/topics/graphics/light-types?playlist=17102)

@@ -12,8 +12,10 @@ Light Types
 - 야외 장면을 밝힐 때 유용.
 
 ***
-### Poing Lights
+### Point Lights
 
 ![image](https://user-images.githubusercontent.com/44865268/52485597-969aef80-2bfc-11e9-807d-33da6a74493c.png)
+
+Point Lights는 world에서 자기 위치의 모든 방향으로 빛을 방출한다.
 
 출처: (https://unity3d.com/kr/learn/tutorials/topics/graphics/light-types?playlist=17102)

@@ -41,4 +41,8 @@ public class AwakeAndStart : MonoBehaviour
 - 스크립트 컴포넌트를 활성화하기 전에 오브젝트 설정을 초기화할 수 있다.
 - 스크립트를 여러 개로 나눌 필요가 없다.
 
+***
+- Awake()는 생성 하자마자 들어가는 함수이고, Start()는 Awake() 후에 Update() 전에 동작 하는 이벤트 함수.
+
+
 출처: (https://unity3d.com/kr/learn/tutorials/topics/scripting/awake-and-start?playlist=17117)

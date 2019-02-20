@@ -48,6 +48,26 @@ public class AwakeAndStart : MonoBehaviour
 한번만 처리하고 싶을 때 Awake 또는 Start를 사용.
 - OnDisable() : 비활성화 시 호출되는 함수.
 
+```c#
+using UnityEngine;
+using System.Collections;
+
+public class AwakeAndStart : MonoBehaviour
+{
+    void Awake ()
+    {
+        Debug.Log("Awake called."); 
+    }
+    
+    
+    void Start ()
+    {
+        Debug.Log("Start called.");
+    }
+}
+```
+
+
 
 
 

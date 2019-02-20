@@ -62,11 +62,11 @@ public class Test : MonoBehaviour
     {
         Debug.Log("Start called.");
     }
-    void Start ()
+    void OnEnable ()
     {
         Debug.Log("Start called.");
     }
-    void Start ()
+    void OnDisable ()
     {
         Debug.Log("Start called.");
     }

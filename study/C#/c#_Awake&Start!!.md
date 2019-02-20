@@ -52,14 +52,20 @@ public class AwakeAndStart : MonoBehaviour
 using UnityEngine;
 using System.Collections;
 
-public class AwakeAndStart : MonoBehaviour
+public class Test : MonoBehaviour
 {
     void Awake ()
     {
         Debug.Log("Awake called."); 
     }
-    
-    
+    void Start ()
+    {
+        Debug.Log("Start called.");
+    }
+    void Start ()
+    {
+        Debug.Log("Start called.");
+    }
     void Start ()
     {
         Debug.Log("Start called.");

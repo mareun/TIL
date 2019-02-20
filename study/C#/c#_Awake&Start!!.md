@@ -64,13 +64,18 @@ public class Test : MonoBehaviour
     }
     void OnEnable ()
     {
-        Debug.Log("Start called.");
+        Debug.Log("OnEnable called.");
     }
     void OnDisable ()
     {
-        Debug.Log("Start called.");
+        Debug.Log("OnDisable called.");
     }
 }
+//Awake called.
+//OnEnable called.
+//Start called.
+//비활성화 시 OnDisable called.
+//다시 활성화 OnEnable called.
 ```
 
 

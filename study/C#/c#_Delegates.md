@@ -22,7 +22,8 @@ public class DelegateScript : MonoBehaviour
     void Start () 
     {
         myDelegate = PrintNum;
-        myDelegate(50);
+        //PrintNum 함수를 myDelegat 변수에 할당.
+        myDelegate(50); //함수처럼 사용
         
         myDelegate = DoubleNum;
         myDelegate(50);

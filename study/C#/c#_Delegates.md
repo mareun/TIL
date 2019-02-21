@@ -22,11 +22,12 @@ public class DelegateScript : MonoBehaviour
     void Start () 
     {
         myDelegate = PrintNum;
-        //PrintNum 함수를 myDelegat 변수에 할당.
+        //PrintNum 함수를 myDelegate 변수에 할당.
         myDelegate(50); //함수처럼 사용
         
         myDelegate = DoubleNum;
-        myDelegate(50);
+        //DoubleNum 함수를 myDelegate 변수에 할당.
+        myDelegate(50); //함수처럼 사용
     }
     
     //다음 두 함수(PrintNum, DoubleNum)는 Delegates에서 선언한 함수와 같이 void 타입이며 단일 정수 파라미터를 가진다.
@@ -42,3 +43,8 @@ public class DelegateScript : MonoBehaviour
 
 }
 ```
+
+> Result\
+Print Num: 50\
+Double Num: 100
+- Delegates를 사용아혀 어떤 함수를 호출할 것인지 동적으로 제어 가능.

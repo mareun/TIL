@@ -49,3 +49,37 @@ public class DelegateScript : MonoBehaviour
 Print Num: 50\
 Double Num: 100
 - Delegates를 사용아혀 어떤 함수를 호출할 것인지 동적으로 제어 가능.
+***
+### MulticastScript
+```c#
+using UnityEngine;
+using System.Collections;
+
+public class MulticastScript : MonoBehaviour 
+{
+    delegate void MultiDelegate();
+    MultiDelegate myMultiDelegate;
+    
+
+    void Start () 
+    {
+        myMultiDelegate += PowerUp;
+        myMultiDelegate += TurnRed;
+        
+        if(myMultiDelegate != null)
+        {
+            myMultiDelegate();
+        }
+    }
+    
+    void PowerUp()
+    {
+        print ("Orb is powering up!");
+    }
+    
+    void TurnRed()
+    {
+        renderer.material.color = Color.red;
+    }
+}
+```

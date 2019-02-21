@@ -28,6 +28,7 @@ public class DelegateScript : MonoBehaviour
         myDelegate(50);
     }
     
+    //다음 두 함수(PrintNum, DoubleNum)는 Delegates에서 선언한 함수와 같이 void 타입이며 단일 정수 파라미터를 가진다.
     void PrintNum(int num)
     {
         print ("Print Num: " + num);
@@ -37,5 +38,6 @@ public class DelegateScript : MonoBehaviour
     {
         print ("Double Num: " + num * 2);
     }
+
 }
 ```

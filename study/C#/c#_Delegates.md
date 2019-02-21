@@ -13,7 +13,7 @@ using System.Collections;
 public class DelegateScript : MonoBehaviour 
 {   
     delegate void MyDelegate(int num);
-    MyDelegate myDelegate;
+    MyDelegate myDelegate; //멤버변수 선언.
     //Delegate는 "delegate"키워드를 사용해서 생성.
     // [반환타입][이름][파라미터 list]
     

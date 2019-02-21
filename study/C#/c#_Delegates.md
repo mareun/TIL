@@ -48,7 +48,7 @@ public class DelegateScript : MonoBehaviour
 > Result\
 Print Num: 50\
 Double Num: 100
-- Delegates를 사용아혀 어떤 함수를 호출할 것인지 동적으로 제어 가능.
+- Delegates를 사용하여 어떤 함수를 호출할 것인지 동적으로 제어 가능.
 ***
 ### MulticastScript
 ```c#

@@ -3,7 +3,8 @@ about practice03
 - 탭 클릭시 viewpager의 fragment를 변경하는 형식
 ![image](https://user-images.githubusercontent.com/44865268/74635075-94248b80-51a8-11ea-9133-63109bfa13e8.png)
 
--오류해결
+***
+### 오류해결
 ```kt
 override fun getItem(position: Int): Fragment?
 //불가능
@@ -28,3 +29,4 @@ class MainAdapter (var fragNum : Int, fm : FragmentManager) : FragmentStatePager
 class MainAdapter (var fragNum : Int, fm : FragmentManager) : FragmentStatePagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {...}
 
 ```
+- build.gradle 에 implementation을 추가 할 때 버전확인 잘해야 함. com.~이 아니라 androidx.~으로 찾아서 넣기

@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
         btn2.setOnClickListener()
         {
-            frame_home.currentItem = 0
+            frame_home.currentItem = 1
         }
     }
 }

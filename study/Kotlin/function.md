@@ -39,6 +39,10 @@ fun sum(a: Int, b:Int) : Int
 2. 일급 객체는 함수의 반환값에 사용할 수 있다.
 3. 일급 객체는 변수에 담을 수 있다.
 ```kt
+val multi: (Int, Int) -> Int = {x: Int, y: Int -> x * y}
+//변수: 람다식 자료형선언 = {람다식 매개변수 -> 람다식 처리내용}
+```
+```kt
 fun main()
 {
     var result: Int
@@ -58,7 +62,7 @@ fun main()
     println(highFunc({x, y -> x + y}, 10, 20))
 }//람다식 함수를 인수로 넘김.
 fun highFunc(sum: (Int, Int) -> Int, a: Int, b: Int): Int = sum(a, b)
-
+```
 ```kt
 /**매개변수에 람다식 함수를 이용한 고차 함수**/
 fun main()
@@ -71,4 +75,28 @@ fun main()
 fun highorder(sum: (Int, Int) -> Int, a: Int, b: Int): Int
 {
     return sum(a, b)
+}
+
+```kt
+/**다른 함수의 참조에 의한 일반 함수 호출**/
+fun sum(a: Int, b: Int) = a + b
+fun text(a: String, b: String) = "Hi! $a $b"
+fun funcParam(a: Int, b: Int, c: (Int, Int)->Int): Int
+{
+    return c(a, b)
+}
+fun hello(body: (String, String)-> String): Unit
+{
+    println(body("Hello", "World"))
+}
+
+fun main()
+{
+    val res1= = funcParam(3, 2, ::sum)
+    println(res1)
+
+    hello(::text)
+
+    val likeLambda = ::sum
+    println(likeLambda(6, 6))
 }

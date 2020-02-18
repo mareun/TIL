@@ -38,3 +38,37 @@ fun sum(a: Int, b:Int) : Int
 1. 일급 객체는 함수의 인자로 전달할 수 있다.
 2. 일급 객체는 함수의 반환값에 사용할 수 있다.
 3. 일급 객체는 변수에 담을 수 있다.
+```kt
+fun main()
+{
+    var result: Int
+    val multi = {x: Int, y: Int -> x * y}
+    //일반 변수에 람다식 할당
+    result=multi(10,20)
+    //람다식이 할당된 변수는 함수처럼 사용 가능
+    println(result)
+}
+```
+- ->이후의 표현식이 여러 줄인 경우 마지막 표현식이 반환.
+> 고차 함수
+- 다른 함수를 인자로 사용하거나 함수를 결괏값으로 반환하는 함수. 일급 객체 혹은 일급 함수를 서로 주고받을 수 잇는 함수가 고차 함수가 됨.
+```kt
+fun main()
+{
+    println(highFunc({x, y -> x + y}, 10, 20))
+}//람다식 함수를 인수로 넘김.
+fun highFunc(sum: (Int, Int) -> Int, a: Int, b: Int): Int = sum(a, b)
+
+```kt
+/**매개변수에 람다식 함수를 이용한 고차 함수**/
+fun main()
+{
+    var result: Int
+    result = highOrder({x, y -> x + y}, 10, 20)
+    println(result)
+}
+
+fun highorder(sum: (Int, Int) -> Int, a: Int, b: Int): Int
+{
+    return sum(a, b)
+}

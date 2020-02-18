@@ -10,14 +10,15 @@ UI를 갱신.
 - Activity는 실행의 진입점 역할을 하는 onCreate() 콜백 함수 이외에도 메인 스레드가 제어하기 위한 여러가지 콜백 함수를 호출함.
 - 필요에 따라 이런 콜백 함수를 오버라이딩하여 작성해 두어야 함. 이것을 생명주기에 대한 콜백 함수라고 함.
 ![image](https://user-images.githubusercontent.com/44865268/74729968-a70e8d00-5288-11ea-9e74-2d456090e9d8.png)
-1. onCreate(): Activity가 처음 만들어질 때 호출되는 함수이면서, 어플리케이션이 처음 시작할 때 최초로 한번 실행되는 함수. 주로 view를 만들거나 veiw resource bind, data to list 등을 onCreate()에서 담담. 이전 상태의 정보를 담고있는 Bundle을 제공함.
-2. onStart(): Activity가 다시 시작되기 전, Activity가 멈춘 후, Activity가 사용자에게 보여지기 직전에 호출되는 함수
-3. onResume(): Activity가 비로소 화면에 보여지는 단계, 사용자에게 Focus를 잡은 상태
-4. onRestart(): Activity가 멈춰있다가 다시 호출될 때 불리는 함수, 즉 Stopped상태였을 때 다시 호출되어 시작될 때 불림.
-5. onPause(): Activity위에 다른 Activity가 올라와서 focus를 잃었을 때 호출되는 함수. 완전 Activity가 가려지지 않은 상태에서 호출되는 함수. 영구적인 data는 여기서 저장.
-6. onStop(): Activity위에 다른 Activity가 완전히 올라와 화면에서 100% 가려질 때 호출되는 함수. 홈키를 누르는 경우. 또는 다른 Activity 페이지 이동이 있는 경ㅇ. 만약 이상태에서 Activity가 다시 불려지면, onRestart()함수가 호출됨.
-7. onDestroy(): Activity가 완전히 스택에서 없어질 때 호출되는 함수, 즉 제거되는 경우. finish()메소드가 호출되거나, 시스템 메모리 확보를 위해 호출됨.
+1. **onCreate()**: Activity가 처음 만들어질 때 호출되는 함수이면서, 어플리케이션이 처음 시작할 때 최초로 한번 실행되는 함수. 주로 view를 만들거나 veiw resource bind, data to list 등을 onCreate()에서 담담. 이전 상태의 정보를 담고있는 Bundle을 제공함.
+2. **onStart()**: Activity가 다시 시작되기 전, Activity가 멈춘 후, Activity가 사용자에게 보여지기 직전에 호출되는 함수
+3. **onResume()**: Activity가 비로소 화면에 보여지는 단계, 사용자에게 Focus를 잡은 상태
+4. **onRestart()**: Activity가 멈춰있다가 다시 호출될 때 불리는 함수, 즉 Stopped상태였을 때 다시 호출되어 시작될 때 불림.
+5. **onPause()**: Activity위에 다른 Activity가 올라와서 focus를 잃었을 때 호출되는 함수. 완전 Activity가 가려지지 않은 상태에서 호출되는 함수. 영구적인 data는 여기서 저장.
+6. **onStop()**: Activity위에 다른 Activity가 완전히 올라와 화면에서 100% 가려질 때 호출되는 함수. 홈키를 누르는 경우. 또는 다른 Activity 페이지 이동이 있는 경ㅇ. 만약 이상태에서 Activity가 다시 불려지면, onRestart()함수가 호출됨.
+7. **onDestroy()**: Activity가 완전히 스택에서 없어질 때 호출되는 함수, 즉 제거되는 경우. finish()메소드가 호출되거나, 시스템 메모리 확보를 위해 호출됨.
 참고: https://limkydev.tistory.com/32
+- **백 스택** : 애플리케이션이 여러 개의 Activity를 가지고 있을 때 새로운 Activity가 호출되면 이전 Activity는 백 스택(Back Stack)에 쌓아 두고 화면에서 가려지므로 보이지 않게 됨. 기기의 Back키가 눌리면 이전 Activity로 돌아가고 스택에서 빠져나옴. 이때 다시 화면에 노출되며 전면에 나타남. 즉 후입선출개념 동작. 만일 Back키를 계속 눌러 더 이상의 Activity가 남아 있지 않으면 애플리케이션은 종료.
 > 메인 스레드
 - 메인 스레드는 눈에 보이지 않지만 Activity를 제어함. 메인 스레드가 Activity를 구동시키고 Activity는 View를 그림.
 > View

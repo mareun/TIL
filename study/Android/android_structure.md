@@ -32,12 +32,38 @@ class MainActivity : AppCompatActivity(){
 
         mWelcomeTextView = findViewById(R.id.msgView) as TextView
         //지연 초기화 시점
-        //findViewById(): xml 레이아웃에 설정된 뷰들을 가져오는 메소드. 이를 이용하면, xml에서 적용 시켰던 글자 삽입, 글자 편집과 이벤트 처리가 가능한 메소드 등을 변경할 수 있는 메소드를 지원하게 됨. 즉, 여기서도 View를 만들 수 있다는 말.
     }
 }
 ```
+1. **findViewById()** : xml 레이아웃에 설정된 뷰들을 가져오는 메소드. 이를 이용하면, xml에서 적용 시켰던 글자 삽입, 글자 편집과 이벤트 처리가 가능한 메소드 등을 변경할 수 있는 메소드를 지원하게 됨. 즉, 여기서도 View를 만들 수 있다는 말.
+2. **lateinit** : 초기화를 나중에 할 경우 lateinit키워드를 변수 선언 앞에 추가해주면 됨. var변수에서만 사용. null값으로 초기화 안됨. 초기화 전에는 변수 사용할 수 없음. Int, Long, Double, Float에는 사용할수 없음.
+3. **lazy** : 값을 변경할 수 없는 val사용 가능.
+```kt
+class MainActivity : AppCompatActivity(){
+    private val messageView : TextView by lazy{
+        //messageView의 첫 접근에서 초기화
+        findViewById(R.id.message_view) as TextView
+    }
+    override fun onCreate(savedInstanceState: Bundle?){
+        super.onCreate(savedinstanceState)
+        setContentView(R.layout.activity_main)
+    }
+    fun onSayHello(){
+        messageView.text="Hello" //이 시점에 초기화됨.
+    }
+}
+```
+### 메인 스레드
 > 메인 스레드
 - 메인 스레드는 눈에 보이지 않지만 Activity를 제어함. 메인 스레드가 Activity를 구동시키고 Activity는 View를 그림.
+- Service도 메인 스레드가 제어.
+> Service
+- 눈에 보이지 않는 백그라운드에서 실행됨. 즉, UI가 없는 서비스는 오랫동안 실행되는 작업에 사용됨.
+- 애플리케이션내에 서비스가 있다면 startService()나 stopService()로 서비스를 시작하거나 중단할 수 있음.
+- 안드로이드는 프로세스(애플리케이션)간 통신 기법으로 운영체제 내부에 있는 Binder라는 요소를 사용. 이는 두 프로세스 간의 메시지를 전달해 줌. 이때 통신에 사용하는 인터페이스를 만들기 위해 AIDL을 이용. 한번 시작된 서비스는 애플리케이션이 종료되고 다른 애플리케이션으로 이동해도 계속 백그라운드에서 실행될 수 있음.
+- Service도 생명주기에 해당하는 콜백 함수를 가지고 있음. 생명주기는 startService()로부터 시작되어 onCreate(), onStartCommand()를 호출하고 stopService()에 의해 onDestroy()를 호출. 특히 bindService()의 경우에는 onBind()를 호출하며 unbindService()명령은 onUnbind()콜백 함수를 호출.
+
+### View
 > View
 - View는 보이지 않는 요소와 보이는 요소로 구분됨.
 - 보이지 않는 레이아웃 요소는 화면 배치 등을 담당.
@@ -56,4 +82,19 @@ class MainActivity: AppCompatActivity(){
 - onCreate()함수는 이제 안드로이드 애플리케이션의 진입점 역할을 하게됨.
 - 여기서 super.onCreate()함수에 의해 부모 클래스에서 할 일을 먼저 처리한 후 setContentView()함수를 처리.
 - setContentView()함수는 리소스로 존재하는 activity_main.xml 레이아웃 파일을 코드를 통해 변환 처리해 UI를 구성.
+
+### 방송 수신자
+- 안드로이드에서 발생하는 다양한 이벤트 및 정보를 받고 전달하는 요소. (시스템 부팅, 배터리 부족, 전화/문자 메시지 수신 등)
+
+### 콘텐츠 제공자
+- 데이터를 관리하거나 다른 애플리케이션에 데이터를 제공하는 요소. 데이터를 저장하기 위해 SQLite나 파일, 웹 등을 이용할 수 있음. 데이터의 고유한 이름으로 URI를 사용해 구분
+
+### 인텐트
+- 안드로이드의 4대 요소 간에 메시지를 전달함. 인텐트는 특정 클래스를 지정하는 명시적 인텐트와 특정 데이터에 대해 수행할 액션을 지정하는 묵시적 인텐트가 있음.
+- 묵시적 인텐트는 특정 클래스를 지정하지 않기 때문에 여러 개의 연관된 요소를 호출할 수 있다는 장점.
+
+### 핸들러와 메시지 큐
+- 안드로이드의 애플리케이션을 실행하는 순간 메인 스레드가 생성되는데 여기에서 메시지 큐와 루퍼가 항상 자동으로 생성됨.
+- UI요소의 갱신과 변경은 오로지 메인 스레드를 통해서만 변경되어야 하는데, 이때 UI요소의 변경 명령은 메인 스레드의 메시지 큐에 차례로 보내 두었다가 하나씩 꺼내 액티비티의 UI 요소를 변경하는 방법을 사용해야함.
+- 루퍼(Looper)는 메시지 큐를 반복적으로 들여다보고 있다가 무언가 오면 처리하는 반복 루틴.
 

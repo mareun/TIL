@@ -19,6 +19,23 @@ UI를 갱신.
 7. **onDestroy()**: Activity가 완전히 스택에서 없어질 때 호출되는 함수, 즉 제거되는 경우. finish()메소드가 호출되거나, 시스템 메모리 확보를 위해 호출됨.
 참고: https://limkydev.tistory.com/32
 - **백 스택** : 애플리케이션이 여러 개의 Activity를 가지고 있을 때 새로운 Activity가 호출되면 이전 Activity는 백 스택(Back Stack)에 쌓아 두고 화면에서 가려지므로 보이지 않게 됨. 기기의 Back키가 눌리면 이전 Activity로 돌아가고 스택에서 빠져나옴. 이때 다시 화면에 노출되며 전면에 나타남. 즉 후입선출개념 동작. 만일 Back키를 계속 눌러 더 이상의 Activity가 남아 있지 않으면 애플리케이션은 종료.
+
+```kt
+/**안드로이드 콜백 함수에 lateinit사용하기**/
+class MainActivity : AppCompatActivity(){
+    private lateinit var mWelcomTextView: TextView
+    //지연 초기화를 위한 선언
+    override fun onCreate(savedInstanceState: Bundle?){
+        //앱의 생명주기(생성 시 호출되는 콜백 함수)
+        super.onCreate(savedinstanceState)
+        setContentView(R.layout.activity_main)
+
+        mWelcomeTextView = findViewById(R.id.msgView) as TextView
+        //지연 초기화 시점
+        //findViewById(): xml 레이아웃에 설정된 뷰들을 가져오는 메소드. 이를 이용하면, xml에서 적용 시켰던 글자 삽입, 글자 편집과 이벤트 처리가 가능한 메소드 등을 변경할 수 있는 메소드를 지원하게 됨. 즉, 여기서도 View를 만들 수 있다는 말.
+    }
+}
+```
 > 메인 스레드
 - 메인 스레드는 눈에 보이지 않지만 Activity를 제어함. 메인 스레드가 Activity를 구동시키고 Activity는 View를 그림.
 > View

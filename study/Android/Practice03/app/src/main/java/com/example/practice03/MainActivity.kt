@@ -2,6 +2,8 @@ package com.example.practice03
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -38,6 +40,21 @@ class MainActivity : AppCompatActivity() {
         btn4.setOnClickListener()
         {
             frame_home.currentItem = 3
+        }
+
+        if(intent.hasExtra("id_key")){
+            login_id_view.text=intent.getStringExtra("id_key")
+            Log.v("TAGG", intent.getStringExtra("id_key"))
+        }
+        else{
+            Toast.makeText(this, "전달된 id가 없습니다.", Toast.LENGTH_SHORT).show()
+        }
+
+        if(intent.hasExtra("pw_key")){
+            login_pw_view.text=intent.getStringExtra("pw_key")
+        }
+        else{
+            Toast.makeText(this, "전달된 pw가 없습니다.", Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -2,6 +2,12 @@ about practice03
 ============
 - 탭 클릭시 viewpager의 fragment를 변경하는 형식
 ![image](https://user-images.githubusercontent.com/44865268/74635075-94248b80-51a8-11ea-9133-63109bfa13e8.png)
+- EditText이용, intent이용해 다른 activity에 값 전달하기&activity 화면전환
+- RecyclerView이용. (fragment위에)
+![image](https://user-images.githubusercontent.com/44865268/74825958-1bf7ca80-534e-11ea-9b4b-73b4d80ac3e5.png)
+출처(https://androidyongyong.tistory.com/5)
+- LayoutManager를 이용하여 item을 위치시키고, item 삭제나 생성과 같은 operation에 animation효과를 줌.
+
 ***
 ### Study
 #### EditText

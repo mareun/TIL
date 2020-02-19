@@ -7,7 +7,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     val MainAdapter: MainAdapter by lazy {
-        MainAdapter(2, supportFragmentManager)
+        MainAdapter(4, supportFragmentManager)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         frame_home.adapter=MainAdapter
-        frame_home.offscreenPageLimit = 2
+        frame_home.offscreenPageLimit = 4
 
         setOnClickListner()
 
@@ -30,6 +30,14 @@ class MainActivity : AppCompatActivity() {
         btn2.setOnClickListener()
         {
             frame_home.currentItem = 1
+        }
+        btn3.setOnClickListener()
+        {
+            frame_home.currentItem = 2
+        }
+        btn4.setOnClickListener()
+        {
+            frame_home.currentItem = 3
         }
     }
 }

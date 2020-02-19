@@ -2,9 +2,10 @@ package com.example.practice03
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+//import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,14 +13,18 @@ class MainActivity : AppCompatActivity() {
         MainAdapter(4, supportFragmentManager)
     }
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         frame_home.adapter=MainAdapter
         frame_home.offscreenPageLimit = 4
 
         setOnClickListner()
+
 
     }
 
@@ -44,7 +49,6 @@ class MainActivity : AppCompatActivity() {
 
         if(intent.hasExtra("id_key")){
             login_id_view.text=intent.getStringExtra("id_key")
-            Log.v("TAGG", intent.getStringExtra("id_key"))
         }
         else{
             Toast.makeText(this, "전달된 id가 없습니다.", Toast.LENGTH_SHORT).show()
@@ -57,4 +61,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "전달된 pw가 없습니다.", Toast.LENGTH_SHORT).show()
         }
     }
+
+
 }
+

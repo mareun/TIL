@@ -9,4 +9,9 @@
         android:layout_height="wrap_content"
         android:text = "1st fragment"
         android:layout_centerInParent="true"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_data_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>

@@ -64,34 +64,7 @@ about practice03
 - **getItemCount()** : RecyclerView()로 만들어지는 item의 총 개수를 반환.
 - **onCreateViewHolder()** : 만들어진 View가 없는 경우 xml파일을 inflate하여 ViewHolder을 생성.
 - **onBindViewHolder** : onCreateViewHolder()에서 만든 View와 실제 입력되는 각각의 data를 연결.
-```kt
-class DataAdapter (
-    val items: ArrayList<String>,
-    val context: Context
-): RecyclerView.Adapter<ViewHolder>() {
-    override fun getItemCount(): Int {
-        return items.size
-    }
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(
-            R.layout.rv_data_list_item,
-            parent,
-            false
-        ))
-    }
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.tvDataType.text = items[position]
-    }
-}
-class ViewHolder(view: View): RecyclerView.ViewHolder(view){
-    val tvDataType = view.tv_data_type!!
-    //리소스를 ViewHolder의 프로퍼티(클래스 내 선언한 변수)로 두면 Viewholder의
-    //생성자에 의해 리소스를 미리 읽어 들인 것과 같기 때문에
-    //여러 개의 View를 사용하더라도 매번 리소스를 찾는 것을 방지
-}
-```
-1. RecyclerView Adapter을 구현하기 위해 DataAdapter클래스 생성. (두 개의 매개변수는 ArrayList와 Context로 지정.)
-2. class ViewHoldr은 data를 로드해 보여주기 위함.
+
 ***
 ### 오류해결
 ```kt

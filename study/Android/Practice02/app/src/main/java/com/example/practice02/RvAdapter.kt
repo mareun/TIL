@@ -25,10 +25,10 @@ class RvAdapter(
     }
 
     override fun onBindViewHolder(holder: mViewH, position: Int) {
-        holder?.bind(ProductList[position], context)
+        holder.bind(ProductList[position], context)
     }
-    
-    class mViewH(view:View) : RecyclerView.ViewHolder(view!!){
+
+    class mViewH(view:View) : RecyclerView.ViewHolder(view){
         var product_img = view.product_list_img
         var product_name = view.product_list_name
         var product_price = view.product_list_price

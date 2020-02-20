@@ -7,9 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.fragment_first.*
-import kotlinx.android.synthetic.main.rv_data_list_item.*
-import java.util.*
 import kotlin.collections.ArrayList
 
 class FirstFragment : Fragment() {
@@ -19,6 +16,7 @@ class FirstFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         var rootView = inflater.inflate(R.layout.rv_data_list_item, container, false)
+
         addDataArray()
         recyclerView01 = rootView.findViewById(R.id.rv_data_list)as RecyclerView
         recyclerView01.layoutManager = LinearLayoutManager(requireContext())

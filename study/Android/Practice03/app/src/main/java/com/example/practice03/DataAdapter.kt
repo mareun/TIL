@@ -11,6 +11,7 @@ class DataAdapter (
     val items: ArrayList<String>,
     val context: Context
 ): RecyclerView.Adapter<ViewHolder>() {
+
     override fun getItemCount(): Int {
         return items.size
     }

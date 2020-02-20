@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.rv_list_item.view.*
 
-class RvAdapter (
+class RvAdapter(
     val context: Context,
     val ProductList: ArrayList<mRecyclerView>
 ): RecyclerView.Adapter<RvAdapter.mViewH>() {
@@ -19,6 +19,15 @@ class RvAdapter (
             false
         ))
     }
+
+    override fun getItemCount(): Int {
+        return ProductList.size
+    }
+
+    override fun onBindViewHolder(holder: mViewH, position: Int) {
+        holder?.bind(ProductList[position], context)
+    }
+    
     class mViewH(view:View) : RecyclerView.ViewHolder(view!!){
         var product_img = view.product_list_img
         var product_name = view.product_list_name
@@ -38,13 +47,4 @@ class RvAdapter (
         }
     }
 
-    override fun getItemCount(): Int {
-        return ProductList.size
-    }
-
-
-
-    override fun onBindViewHolder(holder: mViewH, position: Int) {
-        holder?.bind(ProductList[position], context)
-    }
 }

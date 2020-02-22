@@ -56,13 +56,14 @@ about practice03
 출처 : (https://lktprogrammer.tistory.com/138)
 
 #### ViewHolder
+- ViewHolder 단위 객체로 View의 데이터를 설정.
 - ListView에서 문제점은, 스크롤을 움직이는 등 View가 보이거나 사라지면 그 때마다 findViewById를 통해 convertView에 들어갈 요소를 찾는다는 점. 리소스를 많이 사용하게되고 속도가 느려짐.
 - ViewHolder을 이용하면 View의 재활용(recycle)이 가능.
 - ListView의 각 View와 실제 data를 매칭하는 건 Adapter의 역할임. 즉 ViewHolder을 사용하려면 Adapter내에서 설정해야함.
 
 #### RecyclerView
 - **getItemCount()** : RecyclerView()로 만들어지는 item의 총 개수를 반환.
-- **onCreateViewHolder()** : 만들어진 View가 없는 경우 xml파일을 inflate하여 ViewHolder을 생성.
+- **onCreateViewHolder()** : 만들어진 View가 없는 경우 xml파일을 inflate하여 ViewHolder을 생성. 보여줄 아이템 개수만큼 View를 생성.
 - **onBindViewHolder** : onCreateViewHolder()에서 만든 View와 실제 입력되는 각각의 data를 연결.
 
 ***

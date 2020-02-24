@@ -11,21 +11,21 @@ import kotlin.collections.ArrayList
 
 class FirstFragment : Fragment() {
 
-    val dataArray: ArrayList<String> = ArrayList()
-    lateinit var recyclerView01: RecyclerView
+    /*val dataArray: ArrayList<String> = ArrayList()
+    lateinit var recyclerView01: RecyclerView*/
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        var rootView = inflater.inflate(R.layout.rv_data_list_item, container, false)
+        /*var rootView = inflater.inflate(R.layout.rv_data_list_item, container, false)
 
         addDataArray()
         recyclerView01 = rootView.findViewById(R.id.rv_data_list)as RecyclerView
         recyclerView01.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView01.adapter = DataAdapter(dataArray, requireContext())
+        recyclerView01.adapter = DataAdapter(dataArray, requireContext())*/
 
-        return rootView
+        return inflater.inflate(R.layout.fragment_first, container, false)
 
     }
-    private fun addDataArray(){
+    /*private fun addDataArray(){
         dataArray.add("여기에")
         dataArray.add("배열의")
         dataArray.add("문자열")
@@ -46,5 +46,5 @@ class FirstFragment : Fragment() {
         dataArray.add("그래야")
         dataArray.add("잘")
         dataArray.add("보이지")
-    }
+    }*/
 }

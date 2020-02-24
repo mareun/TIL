@@ -13,18 +13,14 @@ class MainActivity : AppCompatActivity() {
         MainAdapter(4, supportFragmentManager)
     }
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         frame_home.adapter=MainAdapter
         frame_home.offscreenPageLimit = 4
 
         setOnClickListner()
-
 
     }
 

@@ -5,9 +5,14 @@ import android.os.Bundle
 //import android.util.Log
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import androidx.recyclerview.widget.RecyclerView
 
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var viewAdaper: RecyclerViewAdapterProduct
+    private lateinit var viewmanager: RecyclerView.LayoutManager
+
 
     val MainAdapter: MainAdapter by lazy {
         MainAdapter(4, supportFragmentManager)

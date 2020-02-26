@@ -54,7 +54,7 @@ class ExtensionDataAdapter (
             product_price?.text=product.price
             product_score?.text=product.score
 
-            itemView.setOnClickListener(){itemSelect(product)}
+            itemView.setOnClickListener{itemSelect(product)}
         }
     }
 

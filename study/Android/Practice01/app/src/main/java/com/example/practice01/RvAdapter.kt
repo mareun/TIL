@@ -29,10 +29,6 @@ class RvAdapter(
         holder.bind(ProductList[position], context)
     }
 
-    class ExtensionViewHolder(override val containerView: View): RecyclerView.ViewHolder(containerView), LayoutContainer
-    {
-        //
-    }
 
     class mViewH(view:View) : RecyclerView.ViewHolder(view){
         var product_img = view.product_list_img

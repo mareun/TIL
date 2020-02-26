@@ -7,44 +7,50 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.fragment_first.view.*
 import kotlin.collections.ArrayList
 
 class FirstFragment : Fragment() {
+    lateinit var recycle01 : RecyclerView
+    private val list = ArrayList<RVdata>()
+    private val adpater: RecyclerViewAdapterProduct = RecyclerViewAdapterProduct(list)
 
-    /*val dataArray: ArrayList<String> = ArrayList()
-    lateinit var recyclerView01: RecyclerView*/
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        /*var rootView = inflater.inflate(R.layout.rv_data_list_item, container, false)
-
-        addDataArray()
-        recyclerView01 = rootView.findViewById(R.id.rv_data_list)as RecyclerView
-        recyclerView01.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView01.adapter = DataAdapter(dataArray, requireContext())*/
-
-        return inflater.inflate(R.layout.fragment_first, container, false)
-
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        super.onCreate(savedInstanceState)
+        var v : View = inflater.inflate(
+            R.layout.fragment_first,
+            container,
+            false
+        )
+        recycle01 = v.rv_data_list
+        val adpaterr = RecyclerViewAdapterProduct(list)
+        recycle01.layoutManager = LinearLayoutManager(activity)
+        recycle01.adapter = adpaterr
+        return v
     }
-    /*private fun addDataArray(){
-        dataArray.add("여기에")
-        dataArray.add("배열의")
-        dataArray.add("문자열")
-        dataArray.add("알아서")
-        dataArray.add("변환해서")
-        dataArray.add("들어가기")
-        dataArray.add("그랬으면")
-        dataArray.add("좋겠다")
-        dataArray.add("졸작")
-        dataArray.add("화이팅")
-        dataArray.add("실행결과")
-        dataArray.add("조금만더")
-        dataArray.add("써서")
-        dataArray.add("스크롤")
-        dataArray.add("밑으로")
-        dataArray.add("내려가는지")
-        dataArray.add("봐야지")
-        dataArray.add("그래야")
-        dataArray.add("잘")
-        dataArray.add("보이지")
-    }*/
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        list.add(RVdata("aaa", "12000원", "9.5점","pro_1"))
+        list.add(RVdata("abb", "1000원", "9점","pro_2"))
+        list.add(RVdata("acc", "19000원", "5점","pro_3"))
+        list.add(RVdata("bbb", "99700원", "1점","pro_4"))
+        list.add(RVdata("ccc", "3300원", "2점","pro_5"))
+        list.add(RVdata("ddd", "4000원", "3.5점","pro_1"))
+        list.add(RVdata("gg", "8000원", "10점","pro_2"))
+        list.add(RVdata("aq", "2000원", "10점","pro_3"))
+        list.add(RVdata("qpdoe", "300원", "2.5점","pro_4"))
+        list.add(RVdata("vvv", "3300원", "6.5점","pro_5"))
+        list.add(RVdata("sdf", "100원", "8.5점","pro_1"))
+        list.add(RVdata("qwe", "12원", "1.5점","pro_2"))
+        list.add(RVdata("vas", "9990원", "6.5점","pro_3"))
+        list.add(RVdata("dasf", "190000원", "7점","pro_4"))
+        list.add(RVdata("dd", "1222원", "8점","pro_5"))
+        list.add(RVdata("ppp", "12030원", "1점","pro_1"))
+        adpater.notifyDataSetChanged()
+    }
 }

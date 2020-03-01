@@ -76,6 +76,7 @@ fun highorder(sum: (Int, Int) -> Int, a: Int, b: Int): Int
 {
     return sum(a, b)
 }
+```
 
 ```kt
 /**다른 함수의 참조에 의한 일반 함수 호출**/
@@ -100,3 +101,5 @@ fun main()
     val likeLambda = ::sum
     println(likeLambda(6, 6))
 }
+```
+- sum()과 funcParam()의 매개변수 c의 선언부 구조를 보면 인자 수와 자료형의 개수가 동일. 이때는 콜론(::)기호를 함수 이름 앞에 사용해 소괄호와 인자를 생략하고 사용할 수 있음.

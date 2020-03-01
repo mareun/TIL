@@ -107,11 +107,58 @@ rv_data_list_item.xml
     <TextView
         android:id="@+id/product_list_score"
         .../>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
+- rv_data_list_itme.xml을 따로 만들어서 RecyclerView에 들어갈 item 리스트를 작성. 이미지와 텍스트로 구성.
+
+RVdata.kt
+```kt
+class RVdata  (val name: String, val price: String, val score: String, val photo: String)
+```
+- rv_data_list_item에 들어가는 데이터 클래스를 정의.
+
+RecyclerViewAdapterProduct
+```kt
+class RecyclerViewAdapterProduct (val ProductList: ArrayList<RVdata>)
+    : RecyclerView.Adapter<RecyclerViewAdapterProduct.RecyclerViewHolder>(){
+    inner class RecyclerViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
+        var product_img = itemView.product_list_img
+        var product_name = itemView.product_list_name
+        var product_price = itemView.product_list_price
+        var product_score = itemView.product_list_score
+    }
+    //안드에서 제공해주는 RecyclerView.Adapter을 상속해서 정의.
+    //ViewHolder을 이용해서 View의 재활용가능하게 함.
+    //각 View의 이름을 정의해주고, id를 통해 layout과 연결.
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
+        val view: View = LayoutInflater.from(parent.context).inflate(
+            R.layout.rv_data_list_item,
+            parent,
+            false
+        )
+        return RecyclerViewHolder(view)
+    }
+    //ViewHolder을 생성.
+
+    override fun getItemCount(): Int {
+        return ProductList.size
+    }
+    //item의 총 개수를 반환
+
+    override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
+        val item : RVdata = ProductList[position]
+        holder.product_name.text = item.name
+        holder.product_price.text = item.price
+        holder.product_score.text = item.score
+        Glide.with(holder.itemView.context).load(item.photo).apply(RequestOptions()).into(holder.product_img)
+    }
+    //onCreateViewHolder에서 만든 view와 실제 입력되는 각각의 데이터를 연결.
+    //Glide : 사진 로딩에 특화된 라이브러리로 메모리 절약과 자연스러운 사진 로딩에 사용.
+}
+```
+- Adatper 클래스를 정의. 어떤 요소(사진, 이름 ...)등을 어느 View에 넣을 것인지 연결.
+
 ***
 ### 오류해결
 ```kt

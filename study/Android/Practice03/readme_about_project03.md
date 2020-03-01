@@ -62,10 +62,56 @@ about practice03
 - ListView의 각 View와 실제 data를 매칭하는 건 Adapter의 역할임. 즉 ViewHolder을 사용하려면 Adapter내에서 설정해야함.
 
 #### RecyclerView
+
 - **getItemCount()** : RecyclerView()로 만들어지는 item의 총 개수를 반환.
 - **onCreateViewHolder()** : 만들어진 View가 없는 경우 xml파일을 inflate하여 ViewHolder을 생성. 보여줄 아이템 개수만큼 View를 생성.
 - **onBindViewHolder** : onCreateViewHolder()에서 만든 View와 실제 입력되는 각각의 data를 연결.
 
+> Practice03에서의 RecyclerView(Fragment위)구현 요약
+
+fragment_first.xml
+```xml
+<androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_data_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+```
+- fragment_first.xml에 RecyclerView 정의.
+
+rv_data_list_item.xml
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    ...>
+
+    <ImageView
+        android:id="@+id/product_list_img"
+        app:srcCompat="@mipmap/ic_launcher_round"
+        .../>
+
+    <TextView
+        android:id="@+id/product_list_name"
+        .../>
+
+    <TextView
+        android:id="@+id/product_list_price"
+        .../>
+
+    <TextView
+        android:id="@+id/product_list_score"
+        .../>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
 ***
 ### 오류해결
 ```kt

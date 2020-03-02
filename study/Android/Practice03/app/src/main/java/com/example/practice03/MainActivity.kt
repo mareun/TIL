@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var viewAdaper: RecyclerViewAdapterProduct
-    private lateinit var viewmanager: RecyclerView.LayoutManager
+    //private lateinit var viewAdaper: RecyclerViewAdapterProduct
+    //private lateinit var viewmanager: RecyclerView.LayoutManager
 
 
     val MainAdapter: MainAdapter by lazy {

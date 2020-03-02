@@ -8,9 +8,9 @@ import kotlinx.android.synthetic.main.rv_data_list_item.view.*
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
-class RecyclerViewAdapterProduct (val ProductList: ArrayList<RVdata>)
+class RecyclerViewAdapterProduct (val ProductList: ArrayList<RVdata>, val itemClick: (RVdata)->Unit)
     : RecyclerView.Adapter<RecyclerViewAdapterProduct.RecyclerViewHolder>(){
-    inner class RecyclerViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
+    inner class RecyclerViewHolder(itemView: View ,val itemClick: (RVdata)->Unit):RecyclerView.ViewHolder(itemView){
         var product_img = itemView.product_list_img
         var product_name = itemView.product_list_name
         var product_price = itemView.product_list_price
@@ -23,7 +23,7 @@ class RecyclerViewAdapterProduct (val ProductList: ArrayList<RVdata>)
             parent,
             false
         )
-        return RecyclerViewHolder(view)
+        return RecyclerViewHolder(view, itemClick)
     }
 
     override fun getItemCount(): Int {
@@ -36,5 +36,7 @@ class RecyclerViewAdapterProduct (val ProductList: ArrayList<RVdata>)
         holder.product_price.text = item.price
         holder.product_score.text = item.score
         Glide.with(holder.itemView.context).load(item.photo).apply(RequestOptions()).into(holder.product_img)
+
+        holder.itemView.setOnClickListener{itemClick(item)}
     }
 }

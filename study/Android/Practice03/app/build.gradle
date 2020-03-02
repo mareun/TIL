@@ -34,5 +34,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'gun0912.ted:tedpermission:2.1.0'
+    //안드로이드 마시멜로우 버전 이상부터의 권한에 대한 허용을 사용자로부터 받아야함.
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
 }

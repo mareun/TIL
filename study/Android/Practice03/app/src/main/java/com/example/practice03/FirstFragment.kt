@@ -1,5 +1,6 @@
 package com.example.practice03
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -27,7 +28,7 @@ class FirstFragment : Fragment() {
             false
         )
         recycle01 = v.rv_data_list
-        val adpaterr = RecyclerViewAdapterProduct(list)
+        val adpaterr = RecyclerViewAdapterProduct(list, list)
         recycle01.layoutManager = LinearLayoutManager(activity)
         recycle01.adapter = adpaterr
         return v
@@ -52,5 +53,6 @@ class FirstFragment : Fragment() {
         list.add(RVdata("dd", "1222원", "8점","pro_5"))
         list.add(RVdata("ppp", "12030원", "1점","pro_1"))
         adpater.notifyDataSetChanged()
+
     }
 }

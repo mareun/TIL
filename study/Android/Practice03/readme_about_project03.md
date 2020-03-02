@@ -55,7 +55,10 @@ about practice03
 
 출처 : (https://lktprogrammer.tistory.com/138)
 
-### Glide
+---
+
+
+#### Glide
 - 구글에서 공개한 이미지 라이브러리.
 - 사진 로딩에 특화된 라이브러리로 메모리 절약과 자연스러운 사진 로딩에 사용. gif 사용 가능.
 - implementation 'com.github.bumptech.glide:glide:4.9.0'
@@ -63,10 +66,10 @@ about practice03
 - import com.bumptech.glide.Glide
 - import com.bumptech.glide.request.RequestOptions
 - 3개의 필수 파라미터를 요구함. **Glide.with(context).load(이미지파일).into(ImageView)**
-- **with(Context context)** : 안드로이드의 많은 API를 이용하기 위해 필요.
+- **with(Context context)** : 안드로이드의 많은 API를 이용하기 위해 필요. Context뿐 아니라 Activity와 Fragment도 인자로 가능.
 - **load(String imageUrl)** : 웹 상에서의 이미지 경로 URL 또는 안드로이드 리소스 id 또는 로컬 파일 또는 URI
 - **into(Image View targetImageView)** : 다운받은 이미지를 보여줄 이미지 뷰
-
+---
 #### ViewHolder
 - ViewHolder 단위 객체로 View의 데이터를 설정.
 - ListView에서 문제점은, 스크롤을 움직이는 등 View가 보이거나 사라지면 그 때마다 findViewById를 통해 convertView에 들어갈 요소를 찾는다는 점. 리소스를 많이 사용하게되고 속도가 느려짐.
@@ -78,6 +81,7 @@ about practice03
 - **getItemCount()** : RecyclerView()로 만들어지는 item의 총 개수를 반환.
 - **onCreateViewHolder()** : 만들어진 View가 없는 경우 xml파일을 inflate하여 ViewHolder을 생성. 보여줄 아이템 개수만큼 View를 생성.
 - **onBindViewHolder** : onCreateViewHolder()에서 만든 View와 실제 입력되는 각각의 data를 연결.
+---
 
 > Practice03에서의 RecyclerView(Fragment위)구현 요약
 

@@ -5,20 +5,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.graphics.drawable.toBitmap
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_product.*
 import kotlinx.android.synthetic.main.fragment_first.view.*
 import kotlin.collections.ArrayList
 
 class FirstFragment : Fragment() {
     lateinit var recycle01 : RecyclerView
     private val list = ArrayList<RVdata>()
-    companion object{
-        val INTENT_PARCELABLE = "OBJECT_INTENT"
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,9 +28,9 @@ class FirstFragment : Fragment() {
         )
 
         recycle01 = v.rv_data_list
-        val adpater = RecyclerViewAdapterProduct(list) {RVdata ->
+        val adpater = RecyclerViewAdapterProduct(list) { RVdata ->
             val intent = Intent(context, ProductActivity::class.java)
-            intent.putExtra(INTENT_PARCELABLE,"product_info_key")
+            intent.putParcelableArrayListExtra("product_info_key", list)
             startActivity(intent)
         }
         recycle01.layoutManager = LinearLayoutManager(activity)

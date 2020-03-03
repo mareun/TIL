@@ -1,10 +1,16 @@
 package com.example.practice04
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    companion object{
+        val INTENT_PARCELABLE = "OBJECT_INTENT"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,10 +27,15 @@ class MainActivity : AppCompatActivity() {
             ImageData(R.drawable.pro_4, "III"),
             ImageData(R.drawable.pro_5, "JJJ"),
             ImageData(R.drawable.pro_1, "KKK"),
-            ImageData(R.drawable.pro_2, "LLL"),
-
-
-
+            ImageData(R.drawable.pro_2, "LLL")
         )
+        val recyclerView = imageRecyclerView
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.setHasFixedSize(true)
+        recyclerView.adapter = ImageDataAdapter(this, imageList){
+            val intent = Intent(this, DataActivity::class.java)
+            intent.putExtra(INTENT_PARCELABLE, it)
+            startActivity(intent)
+        }
     }
 }

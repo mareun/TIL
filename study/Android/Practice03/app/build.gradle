@@ -21,6 +21,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    androidExtensions{
+        experimental = true
+    }
+    //코틀린 확장 (parcelize기능사용,
 }
 
 dependencies {

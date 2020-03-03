@@ -29,4 +29,6 @@ Layout
 </selector>
 ```
 - 다음과 같이 drawable에 디자인 xml을 추가하면 다른 xml에서 요긴하게 쓰일 수 있다.
+![image](https://user-images.githubusercontent.com/44865268/75757549-ea332a80-5d75-11ea-94c2-7281c08697e3.png)
+
 - 하지만 이 디자인은 굳이 이렇게 안하고 **CareView** 를 이용하면 된다.

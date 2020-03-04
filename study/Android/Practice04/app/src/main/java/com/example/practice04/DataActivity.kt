@@ -16,7 +16,7 @@ class DataActivity : AppCompatActivity() {
         val imgSrc = findViewById<ImageView>(R.id._imageDetail)
         val imgTitle = findViewById<TextView>(R.id._imageTitle)
 
-        imgSrc.setImageResource(image.imageSrc)
+        imgSrc.setImageResource(image!!.imageSrc)
         imgTitle.text = image.imageTitle
 
     }

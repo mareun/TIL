@@ -3,7 +3,7 @@ package com.example.practice04
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
-import kotlinx.android.synthetic.main.activity_data.*
+import android.widget.TextView
 
 class DataActivity : AppCompatActivity() {
 
@@ -11,12 +11,13 @@ class DataActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_data)
 
-        val image = intent.getParcelableArrayListExtra<ImageData>(MainActivity.INTENT_PARCELABLE)
+        val image = intent.getParcelableExtra<ImageData>(MainActivity.INTENT_PARCELABLE)
 
-        val imgSrc = _imageDetail
-        val imgTitle = _imageTitle
+        val imgSrc = findViewById<ImageView>(R.id._imageDetail)
+        val imgTitle = findViewById<TextView>(R.id._imageTitle)
 
-        //imgTitle.text = ImageData.imageTitle
-        //imgSrc.setImageResource(image.imageSrc)
+        imgSrc.setImageResource(image.imageSrc)
+        imgTitle.text = image.imageTitle
+
     }
 }

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             ImageData(R.drawable.pro_1, "KKK"),
             ImageData(R.drawable.pro_2, "LLL")
         )
-        val recyclerView = imageRecyclerView
+        val recyclerView = findViewById<RecyclerView>(R.id.imageRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = ImageDataAdapter(this, imageList){

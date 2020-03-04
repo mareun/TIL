@@ -22,15 +22,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        frame_home.adapter=MainAdapter
+        frame_home.adapter = MainAdapter
         frame_home.offscreenPageLimit = 4
 
         setOnClickListner()
 
     }
 
-    fun setOnClickListner()
-    {
+    fun setOnClickListner() {
+        /********버튼 클릭시 fragment 이동*********/
         btn1.setOnClickListener()
         {
             frame_home.currentItem = 0
@@ -48,21 +48,18 @@ class MainActivity : AppCompatActivity() {
             frame_home.currentItem = 3
         }
 
-        if(intent.hasExtra("id_key")){
-            login_id_view.text=intent.getStringExtra("id_key")
-        }
-        else{
+        /*******LoginActivity에서 intent로 값 전달****/
+        if (intent.hasExtra("id_key")) {
+            login_id_view.text = intent.getStringExtra("id_key")
+        } else {
             Toast.makeText(this, "전달된 id가 없습니다.", Toast.LENGTH_SHORT).show()
         }
 
-        if(intent.hasExtra("pw_key")){
-            login_pw_view.text=intent.getStringExtra("pw_key")
-        }
-        else{
+        if (intent.hasExtra("pw_key")) {
+            login_pw_view.text = intent.getStringExtra("pw_key")
+        } else {
             Toast.makeText(this, "전달된 pw가 없습니다.", Toast.LENGTH_SHORT).show()
         }
     }
-
-
 }
 

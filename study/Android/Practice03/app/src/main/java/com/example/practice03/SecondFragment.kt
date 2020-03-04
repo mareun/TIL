@@ -27,16 +27,16 @@ class SecondFragment : Fragment() {
         private val PICK_FROM_ALBUM = 1001
         private val PICK_FROM_CAMERA = 1002
     }
-/*
-    override fun onCreate(savedInstanceState: Bundle?){
+
+   /*override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
         upload_img_btn.setOnClickListener{
-            var userP = tedPermission(requireContext())
+            var userP = tedPermission(context)
             userP.checkPer()
         }
 
-    }*/
-
+    }
+*/
     /* private fun pickfromAlbum(){
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"

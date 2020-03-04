@@ -34,7 +34,6 @@ class FirstFragment : Fragment() {
         recycle01 = v.rv_data_list
         val adpater = RecyclerViewAdapterProduct(list) { RVdata ->
             val intent = Intent(context, ProductActivity::class.java)
-            //intent.putParcelableArrayListExtra("product_info_key", list)
             intent.putExtra(PRODUCT_INTENT_PARCELABLE,RVdata)
             startActivity(intent)
         }

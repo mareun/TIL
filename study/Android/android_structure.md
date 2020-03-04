@@ -53,6 +53,15 @@ class MainActivity : AppCompatActivity(){
     }
 }
 ```
+
+> startActivityForResult(), onActivityResult()
+- **startActivityForResult()**는 이동된 Activity로부터 값을 가져올 때 쓸 수 있음. A Activity에서 B Activity를 호춣하게 되었을 때, B Activity에서 A Activity로 데이터를 전달할 수 있음.
+- A Activity가 startActivityForResult를 통해서 B Activity를 호출하면, B는 종료가 되면서 Result값을 통해 Extra 꾸러미를 남김. 그러면 Activity는 Extra꾸러미 안에 있는 데이터들을 꺼내서 사용할 수 있음.
+- **A Activity** : int값의 requestCode 값을 설정. -> Intent를 만들어 Activity B를 실행. -> onActiityResult()를 통해 각 requestCode값에 해당하는 결과값을 받아옴.
+- **B Activity** : Intent를 만들어 데이터 꾸러미를 Intent에 추가시킴. -> 결과값을 보내면서 Extra 꾸러미를 가지고 있는 Intent를 함께 넘겨줌.
+
+출처: (https://javaexpert.tistory.com/53)
+
 ### 메인 스레드
 > 메인 스레드
 - 메인 스레드는 눈에 보이지 않지만 Activity를 제어함. 메인 스레드가 Activity를 구동시키고 Activity는 View를 그림.

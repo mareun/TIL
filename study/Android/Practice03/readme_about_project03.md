@@ -6,8 +6,9 @@ about practice03
 - RecyclerView이용. (fragment위에)
 ![image](https://user-images.githubusercontent.com/44865268/74825958-1bf7ca80-534e-11ea-9b4b-73b4d80ac3e5.png)
 출처(https://androidyongyong.tistory.com/5)
-- LayoutManager를 이용하여 item을 위치시키고, item 삭제나 생성과 같은 operation에 animation효과를 줌.
-
+- parcelable을 이용해 데이터 클래스 전달
+- Glide를 이용한 이미지 데이터 전달 및 사진 올리기 (gif파일 포함)
+- tedpermission 라이브러리를 이용한 권한 요청
 ***
 ### Study
 #### EditText

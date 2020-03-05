@@ -1,13 +1,16 @@
 package com.example.practice03
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.fragment_second.*
 
 class SecondFragment : Fragment() {
@@ -33,6 +36,7 @@ class SecondFragment : Fragment() {
         upload_img_btn.setOnClickListener{
             var userP = tedPermission(context1 = context!!)
             userP.checkPer()
+            pickfromAlbum()
         }
 
     }
@@ -43,4 +47,12 @@ class SecondFragment : Fragment() {
         startActivityForResult(intent, PICK_FROM_ALBUM)
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        //super.onActivityResult(requestCode, resultCode, data)
+        if(requestCode == PICK_FROM_ALBUM && resultCode == Activity.RESULT_OK){
+            //var imgUri : Uri? = null
+            var imgUri = data?.data
+            Glide.with(this).load(imgUri).into(upload_img_view)
+        }
+    }
 }

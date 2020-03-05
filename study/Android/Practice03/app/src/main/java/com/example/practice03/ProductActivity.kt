@@ -18,9 +18,8 @@ class ProductActivity : AppCompatActivity() {
         product_info_name.text = product_info!!.name
         product_info_price.text = product_info.price
         product_info_score.text = product_info.score
-        //product_info_img.setImageResource(product_info.photo)
         Glide.with(this).load(product_info.photo).into(product_info_img)
-        //Glide.with(holder.itemView.context).load(item.photo).into(holder.product_img)
+
 
     }
 

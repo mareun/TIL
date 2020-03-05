@@ -28,22 +28,19 @@ class SecondFragment : Fragment() {
         private val PICK_FROM_CAMERA = 1002
     }
 
-   /*override fun onCreate(savedInstanceState: Bundle?){
-        super.onCreate(savedInstanceState)
+   override fun onActivityCreated(savedInstanceState: Bundle?){
+        super.onActivityCreated(savedInstanceState)
         upload_img_btn.setOnClickListener{
-            var userP = tedPermission(context)
+            var userP = tedPermission(context1 = context!!)
             userP.checkPer()
         }
 
     }
-*/
-    /* private fun pickfromAlbum(){
+
+     private fun pickfromAlbum(){
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
         startActivityForResult(intent, PICK_FROM_ALBUM)
-    }*/
+    }
 
-}
-}? 뭐징
-    */
 }

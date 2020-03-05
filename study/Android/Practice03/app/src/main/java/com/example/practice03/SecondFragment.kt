@@ -28,7 +28,7 @@ class SecondFragment : Fragment() {
 
     companion object {
         private val PICK_FROM_ALBUM = 1001
-        private val PICK_FROM_CAMERA = 1002
+        //private val PICK_FROM_CAMERA = 1002
     }
 
    override fun onActivityCreated(savedInstanceState: Bundle?){

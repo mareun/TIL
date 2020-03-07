@@ -27,14 +27,18 @@ class SecondFragment : Fragment() {
     }
 
     companion object {
+        //private val PERMISSION_TRUE = 1000
         private val PICK_FROM_ALBUM = 1001
         //private val PICK_FROM_CAMERA = 1002
+
     }
 
    override fun onActivityCreated(savedInstanceState: Bundle?){
         super.onActivityCreated(savedInstanceState)
         upload_img_btn.setOnClickListener{
             var userP = tedPermission(context1 = context!!)
+
+            //조건문 처리 해줘야함! 두개 동시에 수행됨.
             userP.checkPer()
             pickfromAlbum()
         }

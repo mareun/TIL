@@ -20,7 +20,13 @@ class ProductActivity : AppCompatActivity() {
         product_info_score.text = product_info.score
         Glide.with(this).load(product_info.photo).into(product_info_img)
 
+        product_review_btn.setOnClickListener(){
+            showReviewPop()
+        }
+    }
 
+    fun showReviewPop(){
+        //커스텀 layout으로 AlertDialog, Ratingbar
     }
 
 

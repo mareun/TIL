@@ -6,3 +6,5 @@ Intent
 - **암시적 인텐트** : 전환될 곳을 직접 지정하지 않고 Action을 적어서 사용. 전환될 곳에도 Action을 적어 Intent를 받음. 암시적 인텐트의 경우, manifest에서 Activity를 추가해준 부분에 인텐트필터를 이용.
 
 ### Parcelize
+- 객체 단위로 데이터를 넘겨 줄 때 사용할 수 있음.
+- 

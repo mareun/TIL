@@ -16,9 +16,21 @@
         android:id="@+id/review_dia_rating"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numStars="5"
-        android:layout_marginTop="10dp"/>
-        
+        android:layout_marginTop="10dp"
+        android:numStars="5"/>
+
+    <EditText
+        android:id="@+id/review_dia_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:hint="간단한 리뷰를 남겨주세요(150)"
+        android:textColorHInt="@color/colorAccent"
+        android:maxLength="150"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"/>
+
 
 
 </LinearLayout>
